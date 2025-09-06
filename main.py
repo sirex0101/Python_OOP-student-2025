@@ -85,19 +85,19 @@ c = int(input("Введите третье значение: "))
 print("Сумма чисел:", a+b+c, "Разность чисел:", a-b-c, "Произведение чисел:", a*b*c, "Деление чисел:", a/b/c)
 
 #Задание 2
-salary=int(input("Введите зарплату за месяц:"))
-payment=int(input("Введите сумма месячного платежа по кредиту в банке:"))
-debt=int(input("Введите задолженность за коммунальные услуги:"))
+salary=int(input("Введите зарплату за месяц: "))
+payment=int(input("Введите сумма месячного платежа по кредиту в банке: "))
+debt=int(input("Введите задолженность за коммунальные услуги: "))
 print("Остаток:", salary-payment-debt)
 
 #Задание 3
-a=int(input("Введите первую диагональ ромба:"))
-b=int(input("Введите Вторую диагональ ромба:"))
-print("Площадь ромба равна:",a*b)
+a=int(input("Введите первую диагональ ромба: "))
+b=int(input("Введите вторую диагональ ромба: "))
+print("Площадь ромба равна:",0.5*a*b)
 
 #Задание 4
 print("To be\nor not\nto be")
 
 #Задание 5
-print("\"Life is what happen", "when", "\t\tyou're busy making other plans\"", "\t\t\t\t\t\t\t\t\t\tJonn Lennon.", sep='\n\t\t\t\t\t\t')
-#увы
+print("\"Life is what happen", "when", "\t\tyou're busy making other plans\"", "\t\t\t\t\t\t\t\t\t\tJonn Lennon.", sep='\n\t\t\t\t')
+#как использовать табуляцию более эффективно?
