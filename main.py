@@ -162,9 +162,7 @@
 # if choice==1: print(length/1609)
 # if choice==2: print(length*39.37)
 # if choice==3: print(length*1.094)
-
-
-
+#
 # n = int(input("Введите число от 1 до 100:"))
 # if n>=1 and n<=100:
 #     if n%3==0:
@@ -190,14 +188,62 @@
 #     print("Бесплатно")
 # elif choice_a==1: print(x)
 # elif choice_a==2: print(y)
+#
+# a = int(input("Введите уровень продаж первого менеджера:"))
+# b = int(input("Введите уровень продаж второго менеджера:"))
+# c = int(input("Введите уровень продаж третьего менеджера:"))
+# ap = 100/(a+b+c)/a
+# bp = 100/(a+b+c)/b
+# cp = 100/(a+b+c)/c
+# if
+# print("Зарплата первого менеджера: ")
+# print("Зарплата второго менеджера: ")
+# print("Зарплата третьего менеджера: ")
+#
+# num1 = "" #Первое слагаемое
+# num2 = "" #Второе слагаемое
+# operation = "" #Знак операции
+# letter_num = 0 #Индекс знака операции
+# user_str = input("Введите выражение: ")
+# #Поиск знака и его индекса
+# for i in range(0, len(user_str) ):
+#     if user_str[i] in "+-*/":
+#         letter_num = i
+#         operation = user_str[i]
+# #Поиск 1 числа
+# for i in range(0, letter_num):
+#     num1 += user_str[i]
+# num1 = int(num1)
+# #Поиск 2 числа
+# for i in range(letter_num + 1, len(user_str) ):
+#     num2 += user_str[i]
+# num2 = int(num2)
+# if operation == "+":
+#     result = num1 + num2
+# elif operation == "-":
+#     result = num1 - num2
+# elif operation == "*":
+#     result = num1 * num2
+# elif operation == "/":
+#     result = (num1 / num2)
+# print(user_str, "=", result, sep="")
+#
+# str_reverse = ""
+# user_str = input("Введите строку: ")
+# for i in range(len(user_str)-1, -1, -1):
+#     str_reverse += user_str[i]
+# print(str_reverse)
+#
+# result = 0
+# user_str = input("Введите строку: ")
+# user_search = input("Введите символ для поиска: ")
+# for i in range(0, len(user_str)):
+#     if user_str[i] == user_search:
+#         result += 1
+# print(result)
 
-a = int(input("Введите уровень продаж первого менеджера:"))
-b = int(input("Введите уровень продаж второго менеджера:"))
-c = int(input("Введите уровень продаж третьего менеджера:"))
-ap = 100/(a+b+c)/a
-bp = 100/(a+b+c)/b
-cp = 100/(a+b+c)/c
-if
-print("Зарплата первого менеджера: ")
-print("Зарплата второго менеджера: ")
-print("Зарплата третьего менеджера: ")
+start_range = int(input("Начало диапазона: "))
+end_range = int(input("Конец диапазона: "))
+for i in range(start_range, end_range):
+    if  i % 7 == 0:
+        print(i)
