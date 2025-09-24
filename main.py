@@ -325,7 +325,6 @@ while True:
 # Задание 3
 user_min = int(input("Введите левую границу диапазона: "))
 user_max = int(input("Введите правую границу диапазона: "))
-
 while True:
     user_value = int(input("Введите число для поиска: "))
     if user_value >= user_min and user_value <= user_max:
