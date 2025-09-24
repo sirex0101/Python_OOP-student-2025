@@ -162,7 +162,7 @@
 # if choice==1: print(length/1609)
 # if choice==2: print(length*39.37)
 # if choice==3: print(length*1.094)
-#
+
 # n = int(input("Введите число от 1 до 100: "))
 # if n>=1 and n<=100:
 #     if n%3==0:
@@ -260,8 +260,41 @@
 #         result += 1
 # print(result)
 
+# Задание 1
 start_range = int(input("Начало диапазона: "))
 end_range = int(input("Конец диапазона: "))
-for i in range(start_range, end_range):
+for i in range(start_range, end_range + 1):
     if  i % 7 == 0:
-        print(i)
+        print(i, end=" ")
+print("\n")
+
+# Задание 2
+start_range = int(input("Начало диапазона: "))
+end_range = int(input("Конец диапазона: "))
+num_5 = 0
+for i in range(start_range, end_range + 1):
+    print(i, end=" ")
+print("\n")
+for i in range(end_range, start_range - 1, -1):
+    print(i, end=" ")
+print("\n")
+for i in range(start_range, end_range + 1):
+    if  i % 7 == 0:
+        print(i, end=" ")
+print("\n")
+for i in range(start_range, end_range + 1):
+    if  i % 5 == 0:
+        num_5 += 1
+print(num_5)
+
+# Задание 3
+start_range = int(input("Начало диапазона: "))
+end_range = int(input("Конец диапазона: "))
+for i in range(start_range, end_range + 1):
+    if i%3==0 and i%5==0:
+        print("Fizz Buzz")
+    elif i%3==0:
+        print("Fizz")
+    elif i%5==0:
+        print("Buzz")
+    else: print(i)
