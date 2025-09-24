@@ -350,7 +350,7 @@ start_time = time()
 while True:
     user_input = int(input(f"Попытка номер {user_attempt}, Введите число: "))
     if user_input == 0: break
-    elif user_input > 500 or user_input < 0: 
+    elif user_input > 500 or user_input < 1: 
         print("Вне диапазона, загаданное число от 1 до 500, попытка не засчитывается")
         user_attempt += -1
     elif user_input > value_randint: print("Загаданное число меньше")
