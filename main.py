@@ -372,50 +372,52 @@ for i in list_u:
     summ += i
 print(f"Список: {list_u}\nСумма элементов: {summ}")
 
+
+# Задание 1
+list_u = [randint(0, 9) for _ in range(10)]
+multiply = 1
+for i in list_u:
+    multiply = multiply * i
+print(f"Список: {list_u} Произведение элементов: {multiply}")
+
 # Задание 2
-list_u = []
-for i in range(10):
-    list_u.append(randint(0,10))
+list_u = [randint(0, 9) for _ in range(10)]
 list_min = list_u[0]
 for i in list_u:
     if list_min > i:
         list_min = i
-print(f"Список: {list_u}\nМинимальный элемент: {list_min}")
+print(f"Список: {list_u} Минимальный элемент: {list_min}")
 
 # Задание 3
-# list_u = []
-# for i in range(10):
-#     list_u.append(randint(0,10))
-# list_prime = []
-# for i in list_u:
-    
-# print(f"Список: {list_u}\nПростые числа списка: {list_prime}")
+list_u = [randint(0, 9) for _ in range(10)]
+count_prime = 0
+for i in list_u:
+    if i == 2 or i == 3 or i == 5 or i == 7: # не очень получилось написать алгоритм поиска простых чисел, поэтому вот простые числа от 0 до 9
+        count_prime += 1
+print()
 
 # Задание 4
-list_u = []
-for i in range(10):
-    list_u.append(randint(0,10))
+list_u = [randint(0, 9) for _ in range(10)]
 del_count = 0
 while True:
-    print(f"Список: {list_u}")
+    print(list_u)
     user_del = input("Удалить число(00 - выход): ")
     if user_del == "00": break
     list_u.pop(list_u.index(int(user_del)))
     del_count += 1
-print(f"Список: {list_u}\nУдалённых элементов: {del_count}")
+print(f"Список: {list_u} Кол-во удалённых элементов: {del_count}")
 
 # Задание 5
-list_a = []
-for i in range(10):
-    list_a.append(randint(0,10))
-print(list_a)
-list_b = []
-for i in range(10):
-    list_b.append(randint(0,10))
-print(list_b)
-while list_b != []:
-    i = list_b.pop
-    list_a.append(i)
-print(list_a)
+list_a = [randint(0, 9) for _ in range(10)]
+list_b = [randint(0, 9) for _ in range(10)]
+def list_u(list_a, list_b):
+    return list_a + list_b
+print(list_u(list_a, list_b))
 
 # Задание 6
+list_u = [randint(0, 9) for _ in range(10)]
+print(list_u)
+uu = int(input("Введите степень: "))
+def list_uu(list_u, uu):
+    return([i ** uu for i in list_u])
+print(list_uu(list_u, uu))
