@@ -299,65 +299,123 @@
 #         print("Buzz")
 #     else: print(i)
 
-# Задание 1
-user_num = int(input("Введите число: "))
-for i in range(1, 9 + 1):
-    print(f"{user_num} * {i} = {user_num * i}")
+# # Задание 1
+# user_num = int(input("Введите число: "))
+# for i in range(1, 9 + 1):
+#     print(f"{user_num} * {i} = {user_num * i}")
+
+# # Задание 2
+# while True:
+#     user_input = int(input("Введите значение в рублях: "))
+#     if user_input == 0:
+#         break
+#     print("1. Перевести в Доллары \n"
+#           "2. Перевести в Юани \n"
+#           "3. Перевести в Тенге \n"
+#           "4. Перевести в Бел. Рубль \n"
+#           "0. Выход")
+#     user_choice = int(input("Введите выбор: "))
+#     if user_choice == 0:
+#         break
+#     elif user_choice == 1: print(user_input*0.012)
+#     elif user_choice == 2: print(user_input*0.085)
+#     elif user_choice == 3: print(user_input*6.48)
+#     elif user_choice == 4: print(user_input*0.041)
+
+# # Задание 3
+# user_min = int(input("Введите левую границу диапазона: "))
+# user_max = int(input("Введите правую границу диапазона: "))
+# while True:
+#     user_value = int(input("Введите число для поиска: "))
+#     if user_value >= user_min and user_value <= user_max:
+#         break
+# while user_min <= user_max:
+#     if user_min == user_value:
+#         print(f"!{user_min}!", end=" ")
+#     else:
+#         print(user_min, end=" ")
+#     user_min += 1
+# print("\n")
+
+# # Задание 4
+# from random import randint
+# from time import time
+# value_randint = randint(1, 500)
+# user_attempt = 1
+# print("Добро пожаловать в игру \"угадай число\"\n"
+#       "Ваша задача - угадать число в диапозоне от 1 до 500\n"
+#       "0 - выход из игры\n"
+#       "Время пошло, удачи!")
+# start_time = time()
+# while True:
+#     user_input = int(input(f"Попытка номер {user_attempt}, Введите число: "))
+#     if user_input == 0: break
+#     elif user_input > 500 or user_input < 1: 
+#         print("Вне диапазона, загаданное число от 1 до 500, попытка не засчитывается")
+#         user_attempt += -1
+#     elif user_input > value_randint: print("Загаданное число меньше")
+#     elif user_input < value_randint: print("Загаданное число больше")
+#     else:
+#         stop_time = time()
+#         print(f"Абсолютно верно!\n"
+#               f"число угадано спустя {user_attempt} попыток, это заняло {int(end_time - start_time)} секунд")
+#         break
+#     user_attempt += 1
+
+from random import randint
+
+list_u = []
+for i in range(10):
+    list_u.append(randint(0,10))
+summ = 0
+for i in list_u:
+    summ += i
+print(f"Список: {list_u}\nСумма элементов: {summ}")
 
 # Задание 2
-while True:
-    user_input = int(input("Введите значение в рублях: "))
-    if user_input == 0:
-        break
-    print("1. Перевести в Доллары \n"
-          "2. Перевести в Юани \n"
-          "3. Перевести в Тенге \n"
-          "4. Перевести в Бел. Рубль \n"
-          "0. Выход")
-    user_choice = int(input("Введите выбор: "))
-    if user_choice == 0:
-        break
-    elif user_choice == 1: print(user_input*0.012)
-    elif user_choice == 2: print(user_input*0.085)
-    elif user_choice == 3: print(user_input*6.48)
-    elif user_choice == 4: print(user_input*0.041)
+list_u = []
+for i in range(10):
+    list_u.append(randint(0,10))
+list_min = list_u[0]
+for i in list_u:
+    if list_min > i:
+        list_min = i
+print(f"Список: {list_u}\nМинимальный элемент: {list_min}")
 
 # Задание 3
-user_min = int(input("Введите левую границу диапазона: "))
-user_max = int(input("Введите правую границу диапазона: "))
-while True:
-    user_value = int(input("Введите число для поиска: "))
-    if user_value >= user_min and user_value <= user_max:
-        break
-while user_min <= user_max:
-    if user_min == user_value:
-        print(f"!{user_min}!", end=" ")
-    else:
-        print(user_min, end=" ")
-    user_min += 1
-print("\n")
+# list_u = []
+# for i in range(10):
+#     list_u.append(randint(0,10))
+# list_prime = []
+# for i in list_u:
+    
+# print(f"Список: {list_u}\nПростые числа списка: {list_prime}")
 
 # Задание 4
-from random import randint
-from time import time
-value_randint = randint(1, 500)
-user_attempt = 1
-print("Добро пожаловать в игру \"угадай число\"\n"
-      "Ваша задача - угадать число в диапозоне от 1 до 500\n"
-      "0 - выход из игры\n"
-      "Время пошло, удачи!")
-start_time = time()
+list_u = []
+for i in range(10):
+    list_u.append(randint(0,10))
+del_count = 0
 while True:
-    user_input = int(input(f"Попытка номер {user_attempt}, Введите число: "))
-    if user_input == 0: break
-    elif user_input > 500 or user_input < 1: 
-        print("Вне диапазона, загаданное число от 1 до 500, попытка не засчитывается")
-        user_attempt += -1
-    elif user_input > value_randint: print("Загаданное число меньше")
-    elif user_input < value_randint: print("Загаданное число больше")
-    else:
-        end_time = time()
-        print(f"Абсолютно верно!\n"
-              f"число угадано спустя {user_attempt} попыток, это заняло {int(end_time - start_time)} секунд")
-        break
-    user_attempt += 1
+    print(f"Список: {list_u}")
+    user_del = input("Удалить число(00 - выход): ")
+    if user_del == "00": break
+    list_u.pop(list_u.index(int(user_del)))
+    del_count += 1
+print(f"Список: {list_u}\nУдалённых элементов: {del_count}")
+
+# Задание 5
+list_a = []
+for i in range(10):
+    list_a.append(randint(0,10))
+print(list_a)
+list_b = []
+for i in range(10):
+    list_b.append(randint(0,10))
+print(list_b)
+while list_b != []:
+    i = list_b.pop
+    list_a.append(i)
+print(list_a)
+
+# Задание 6
