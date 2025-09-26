@@ -362,16 +362,15 @@
 #         break
 #     user_attempt += 1
 
+# list_u = []
+# for i in range(10):
+#     list_u.append(randint(0,10))
+# summ = 0
+# for i in list_u:
+#     summ += i
+# print(f"Список: {list_u}\nСумма элементов: {summ}")
+
 from random import randint
-
-list_u = []
-for i in range(10):
-    list_u.append(randint(0,10))
-summ = 0
-for i in list_u:
-    summ += i
-print(f"Список: {list_u}\nСумма элементов: {summ}")
-
 
 # Задание 1
 list_u = [randint(0, 9) for _ in range(10)]
@@ -390,11 +389,20 @@ print(f"Список: {list_u} Минимальный элемент: {list_min}
 
 # Задание 3
 list_u = [randint(0, 9) for _ in range(10)]
-count_prime = 0
-for i in list_u:
-    if i == 2 or i == 3 or i == 5 or i == 7: # не очень получилось написать алгоритм поиска простых чисел, поэтому вот простые числа от 0 до 9
-        count_prime += 1
-print()
+def count_primes(list_u):
+    def is_prime(n):
+        if n < 2:
+            return False
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True
+    count_prime = 0
+    for i in list_u:
+        if is_prime(i):
+            count_prime += 1
+    return count_prime
+print(f"Список: {list_u} Количество простых чисел: {count_primes(list_u)}")
 
 # Задание 4
 list_u = [randint(0, 9) for _ in range(10)]
