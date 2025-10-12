@@ -370,62 +370,192 @@
 #     summ += i
 # print(f"Список: {list_u}\nСумма элементов: {summ}")
 
-from random import randint
+# from random import randint
 
-# Задание 1
-list_u = [randint(0, 9) for _ in range(10)]
-multiply = 1
-for i in list_u:
-    multiply = multiply * i
-print(f"Список: {list_u} Произведение элементов: {multiply}")
+# # Задание 1
+# list_u = [randint(0, 9) for _ in range(10)]
+# multiply = 1
+# for i in list_u:
+#     multiply = multiply * i
+# print(f"Список: {list_u} Произведение элементов: {multiply}")
 
-# Задание 2
-list_u = [randint(0, 9) for _ in range(10)]
-list_min = list_u[0]
-for i in list_u:
-    if list_min > i:
-        list_min = i
-print(f"Список: {list_u} Минимальный элемент: {list_min}")
+# # Задание 2
+# list_u = [randint(0, 9) for _ in range(10)]
+# list_min = list_u[0]
+# for i in list_u:
+#     if list_min > i:
+#         list_min = i
+# print(f"Список: {list_u} Минимальный элемент: {list_min}")
 
-# Задание 3
-list_u = [randint(0, 9) for _ in range(10)]
-def count_primes(list_u):
-    def is_prime(n):
-        if n < 2:
-            return False
-        for i in range(2, n):
-            if n % i == 0:
-                return False
-        return True
-    count_prime = 0
-    for i in list_u:
-        if is_prime(i):
-            count_prime += 1
-    return count_prime
-print(f"Список: {list_u} Количество простых чисел: {count_primes(list_u)}")
+# # Задание 3
+# list_u = [randint(0, 9) for _ in range(10)]
+# def count_primes(list_u):
+#     def is_prime(n):
+#         if n < 2:
+#             return False
+#         for i in range(2, n):
+#             if n % i == 0:
+#                 return False
+#         return True
+#     count_prime = 0
+#     for i in list_u:
+#         if is_prime(i):
+#             count_prime += 1
+#     return count_prime
+# print(f"Список: {list_u} Количество простых чисел: {count_primes(list_u)}")
 
-# Задание 4
-list_u = [randint(0, 9) for _ in range(10)]
-del_count = 0
-while True:
-    print(list_u)
-    user_del = input("Удалить число(00 - выход): ")
-    if user_del == "00": break
-    list_u.pop(list_u.index(int(user_del)))
-    del_count += 1
-print(f"Список: {list_u} Кол-во удалённых элементов: {del_count}")
+# # Задание 4
+# list_u = [randint(0, 9) for _ in range(10)]
+# del_count = 0
+# while True:
+#     print(list_u)
+#     user_del = input("Удалить число(00 - выход): ")
+#     if user_del == "00": break
+#     list_u.pop(list_u.index(int(user_del)))
+#     del_count += 1
+# print(f"Список: {list_u} Кол-во удалённых элементов: {del_count}")
 
-# Задание 5
-list_a = [randint(0, 9) for _ in range(10)]
-list_b = [randint(0, 9) for _ in range(10)]
-def list_u(list_a, list_b):
-    return list_a + list_b
-print(list_u(list_a, list_b))
+# # Задание 5
+# list_a = [randint(0, 9) for _ in range(10)]
+# list_b = [randint(0, 9) for _ in range(10)]
+# def list_u(list_a, list_b):
+#     return list_a + list_b
+# print(list_u(list_a, list_b))
 
-# Задание 6
-list_u = [randint(0, 9) for _ in range(10)]
-print(list_u)
-uu = int(input("Введите степень: "))
-def list_uu(list_u, uu):
-    return([i ** uu for i in list_u])
-print(list_uu(list_u, uu))
+# # Задание 6
+# list_u = [randint(0, 9) for _ in range(10)]
+# print(list_u)
+# uu = int(input("Введите степень: "))
+# def list_uu(list_u, uu):
+#     return([i ** uu for i in list_u])
+# print(list_uu(list_u, uu))
+
+# from random import randint
+# from time import time
+
+# list_sort_buble = [randint(0, 100) for _ in range(10)]
+# print(f"Начальный список: {list_sort_buble}")
+# N = len(list_sort_buble)
+
+# start = time()
+# for i in range(N):
+#     for j in range(N - 1 - i):
+#         if list_sort_buble[j] > list_sort_buble[j+1]:
+#             list_sort_buble[j], list_sort_buble[j+1] = list_sort_buble[j+1], list_sort_buble[j]
+# stop = time()
+# print(f"Отсортированный список: {list_sort_buble}\n"
+#       f"Сортировка buble заняло: {stop - start} секунд")
+
+
+# # Задание 1
+# N = 20
+# list_sort_buble = [randint(-10, 10) for _ in range(N)]
+# print(f"Начальный список: {list_sort_buble}")
+# start = time()
+# for i in range(N//2):
+#     for j in range(N//2 - 1 - i):
+#         if list_sort_buble[j] > list_sort_buble[j+1]:
+#             list_sort_buble[j], list_sort_buble[j+1] = list_sort_buble[j+1], list_sort_buble[j]
+# for i in range(N//2):
+#     for j in range(N//2, N - 1 - i):
+#         if list_sort_buble[j] < list_sort_buble[j+1]:
+#             list_sort_buble[j], list_sort_buble[j+1] = list_sort_buble[j+1], list_sort_buble[j]
+# stop = time()
+# list_sort_buble.insert(10, "!!")
+# print(f"Отсортированный список: {list_sort_buble}\n"
+#       f"Сортировка buble заняло: {stop - start} секунд")
+
+
+# # Задание 2
+# N = 45
+# list_a = [randint(-20, 20) for _ in range(N)]
+# print(f"Начальный список: {list_a}")
+# list_result = [num for num in list_a if num % 2 == 0]
+# list_result += [num for num in list_a if num % 2 != 0]
+# for i in range(N//3, N - N//3 + 1, 2):
+#     list_result[i] = max(list_result)
+#     list_result[i + 1] = min(list_result)
+# print(f"Результат: {list_result}")
+
+'''
+Сортировка вставками
+Основная задача сортировки - создать два сегмента нашего списка:
+1 - отсортированный
+2 - несортированный
+В процессе работы алгоритма, мы каждый раз удалем самый маленький элемент
+из несортированного списка и добавляем его в отсортированный список.
+==>Алторитм с минимальным кол-вом перестановок.
+Сам алгоритм является:
+1) нерекурсивным,
+2) может быть устойчивым, так и неустойчевым,
+3) преобразует входные данные без использования вспомогательных структур
+4) имеет сложность O(n2).
+'''
+
+# from random import randint
+
+# N = 10
+# mylist = [randint(1, 99) for _ in range(N)]
+# print(f"Неотсортированный список: {mylist}")
+# i = 0 # Первая ячейка
+# while i < N - 1: # Пока i меньше последнего элемента
+#     m = i # Индекс ячейки с мин значением
+#     j = i + 1 # Поиск осуществлется со след ячейки
+#     while j < N:
+#         if mylist[j] < mylist[m]:
+#             m = j # Сохраняет в m номер найденого минимума
+#         j += 1
+#     mylist[i], mylist[m] = mylist[m], mylist[i]
+#     i += 1
+# print(f"Отсортированный список: {mylist}")
+
+# # Задание 3
+# N = 15
+# mylist = [randint(1, 100) for _ in range(N)]
+# print(f"Неотсортированный список: {mylist}")
+# i = 0
+# while i < N - 1:
+#     m = i
+#     j = i + 1
+#     while j < N:
+#         if mylist[j] > mylist[m]:
+#             m = j
+#         j += 1
+#     mylist[i], mylist[m] = mylist[m], mylist[i]
+#     i += 1
+#     print(f"Итерация номер {i}: {mylist}")
+# print(f"Отсортированный список: {mylist}")
+
+# # Задание 4
+# words = ["apple", "banana", "cherry", "date", "apricot"]
+# print(f"Неотсортированный список: {words}")
+# N = len(words)
+# for i in range(N):
+#     key = words[i]
+#     j = i - 1
+#     while j >= 0 and words[j] > key:
+#         words[j + 1] = words[j]
+#         j += -1
+#     words[j + 1] = key
+# print(f"Отсортированный список: {words}")
+
+# # Задание 5
+# N = 10
+# myarr = [randint(1, 100) for _ in range(N)]
+# print(f"Неотсортированный массив: {myarr}")
+# K = randint(0, N - 1)
+# print(f"Индекс: {K}")
+# num_K = myarr.pop(K)
+# N += -1
+# i = 0
+# while i < N - 1:
+#     m = i
+#     j = i + 1
+#     while j < N:
+#         if myarr[j] < myarr[m]:
+#             m = j
+#         j += 1
+#         myarr[i], myarr[m] = myarr[m], myarr[i]
+#     i += 1
+# myarr.insert(K, num_K)
+# print(f"Отсортированный массив: {myarr}")
