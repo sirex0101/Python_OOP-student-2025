@@ -559,3 +559,82 @@
 #     i += 1
 # myarr.insert(K, num_K)
 # print(f"Отсортированный массив: {myarr}")
+
+# Кортежи, множества, словари
+
+my_list = [1, 2, 3, 4]
+print(my_list, type(my_list)) # class list
+a = (1, 2, 3, 4)
+print(a, type(a)) # class tuple
+dictionary = {"персона": "человек", "марафон": "гонка бегунов", "бежать": "двигаться со скоростью"}
+print(dictionary, type(dictionary)) # class dict
+story_count = {"Сто": 100,
+               "Двести": 200,
+               "Девяносто": 90,
+               "Двенадцать": 100,
+               "Десять": 100,}
+d = {(1, 2, 3):"Кортежи могут быть ключами",
+     1:"Целые тоже",
+     "строки":"тоже"}
+#   Списки не могут
+# int(1) = float(1.0) = True
+
+# Функции для работы со словарём
+d = {"dict_key":1, "dictionary":2}
+d = dict(short="dict", long="dictionary")
+d = dict([(1,1),(2,2)])
+d = dict.fromkeys(["a","b"], 100)
+key_list = ["marvel", "dc"]
+value_list = ["Spiderman", "Flash"]
+superhero_list = dict(zip(key_list, value_list))
+d = {a: a**2 for a in range(7)}
+# Получение, добаление, обновление, обновление
+story_count["Hello"] = "world"
+
+# d.clear()
+del d
+'''
+    dict.copy() - копирование словаря
+    dict.get() - получить значение из словаря
+    dict.update() - изменить значение по ключу
+    dict.pop() - удалить последний добавленный элемент
+    dict.setdefault() - поиск по ключу, если элемента нет, то создаёт его
+    dict.keys() - возвращает список ключей
+    dict.values() - возвращает список значений
+    dict.items() - возвращает пару ключ+значение
+Итерация
+'''
+
+for key in story_count:
+    print(key)
+
+for value in story_count.values():
+    print(value)
+
+for key,value in story_count.items():
+    print(key,value)
+
+# Множества(set)
+a = set()
+a = set("hello") # {"h", "e", "l", "o"}
+
+#Методы множества
+'''
+    len(a)
+    a.isdisjoint(other) - Проверка обших элементов 2х множества
+    a.issybset(other) - является ли элементы в множестве подмножеством
+    a.issuperset() - аналогично
+    a.union(other) - объединение множества
+    a.intersection(other) - пересечение множества 
+    a.difference(other) - уникальные элементы
+    a.symmetric_difference() - есть в 1, но нет во 2 множестве
+    а.сору() - копирование множества
+    a.update() - изменение элемента
+    a.intersection_update()
+    a.difference_update()
+    a.symmetric_difference()
+    a.add() - добавление элемента
+    a.remove() - удаление злемента, если его нет - будет ошибка
+    a.discard() - удаление элемента, если он есть
+    a.clear() - очистка множества
+'''
