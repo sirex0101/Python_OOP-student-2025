@@ -560,81 +560,330 @@
 # myarr.insert(K, num_K)
 # print(f"Отсортированный массив: {myarr}")
 
-# Кортежи, множества, словари
+# # Кортежи, множества, словари
 
-my_list = [1, 2, 3, 4]
-print(my_list, type(my_list)) # class list
-a = (1, 2, 3, 4)
-print(a, type(a)) # class tuple
-dictionary = {"персона": "человек", "марафон": "гонка бегунов", "бежать": "двигаться со скоростью"}
-print(dictionary, type(dictionary)) # class dict
-story_count = {"Сто": 100,
-               "Двести": 200,
-               "Девяносто": 90,
-               "Двенадцать": 100,
-               "Десять": 100,}
-d = {(1, 2, 3):"Кортежи могут быть ключами",
-     1:"Целые тоже",
-     "строки":"тоже"}
-#   Списки не могут
-# int(1) = float(1.0) = True
+# my_list = [1, 2, 3, 4]
+# print(my_list, type(my_list)) # class list
+# a = (1, 2, 3, 4)
+# print(a, type(a)) # class tuple
+# dictionary = {"персона": "человек", "марафон": "гонка бегунов", "бежать": "двигаться со скоростью"}
+# print(dictionary, type(dictionary)) # class dict
+# story_count = {"Сто": 100,
+#                "Двести": 200,
+#                "Девяносто": 90,
+#                "Двенадцать": 100,
+#                "Десять": 100,}
+# d = {(1, 2, 3):"Кортежи могут быть ключами",
+#      1:"Целые тоже",
+#      "строки":"тоже"}
+# #   Списки не могут
+# # int(1) = float(1.0) = True
 
-# Функции для работы со словарём
-d = {"dict_key":1, "dictionary":2}
-d = dict(short="dict", long="dictionary")
-d = dict([(1,1),(2,2)])
-d = dict.fromkeys(["a","b"], 100)
-key_list = ["marvel", "dc"]
-value_list = ["Spiderman", "Flash"]
-superhero_list = dict(zip(key_list, value_list))
-d = {a: a**2 for a in range(7)}
-# Получение, добаление, обновление, обновление
-story_count["Hello"] = "world"
+# # Функции для работы со словарём
+# d = {"dict_key":1, "dictionary":2}
+# d = dict(short="dict", long="dictionary")
+# d = dict([(1,1),(2,2)])
+# d = dict.fromkeys(["a","b"], 100)
+# key_list = ["marvel", "dc"]
+# value_list = ["Spiderman", "Flash"]
+# superhero_list = dict(zip(key_list, value_list))
+# d = {a: a**2 for a in range(7)}
+# # Получение, добаление, обновление, обновление
+# story_count["Hello"] = "world"
 
-# d.clear()
-del d
-'''
-    dict.copy() - копирование словаря
-    dict.get() - получить значение из словаря
-    dict.update() - изменить значение по ключу
-    dict.pop() - удалить последний добавленный элемент
-    dict.setdefault() - поиск по ключу, если элемента нет, то создаёт его
-    dict.keys() - возвращает список ключей
-    dict.values() - возвращает список значений
-    dict.items() - возвращает пару ключ+значение
-Итерация
-'''
+# # d.clear()
+# del d
+# '''
+#     dict.copy() - копирование словаря
+#     dict.get() - получить значение из словаря
+#     dict.update() - изменить значение по ключу
+#     dict.pop() - удалить последний добавленный элемент
+#     dict.setdefault() - поиск по ключу, если элемента нет, то создаёт его
+#     dict.keys() - возвращает список ключей
+#     dict.values() - возвращает список значений
+#     dict.items() - возвращает пару ключ+значение
+# Итерация
+# '''
 
-for key in story_count:
-    print(key)
+# for key in story_count:
+#     print(key)
 
-for value in story_count.values():
-    print(value)
+# for value in story_count.values():
+#     print(value)
 
-for key,value in story_count.items():
-    print(key,value)
+# for key,value in story_count.items():
+#     print(key,value)
 
-# Множества(set)
-a = set()
-a = set("hello") # {"h", "e", "l", "o"}
+# # Множества(set)
+# a = set()
+# a = set("hello") # {"h", "e", "l", "o"}
 
-#Методы множества
-'''
-    len(a)
-    a.isdisjoint(other) - Проверка обших элементов 2х множества
-    a.issybset(other) - является ли элементы в множестве подмножеством
-    a.issuperset() - аналогично
-    a.union(other) - объединение множества
-    a.intersection(other) - пересечение множества 
-    a.difference(other) - уникальные элементы
-    a.symmetric_difference() - есть в 1, но нет во 2 множестве
-    а.сору() - копирование множества
-    a.update() - изменение элемента
-    a.intersection_update()
-    a.difference_update()
-    a.symmetric_difference()
-    a.add() - добавление элемента
-    a.remove() - удаление злемента, если его нет - будет ошибка
-    a.discard() - удаление элемента, если он есть
-    a.clear() - очистка множества
-'''
+# #Методы множества
+# '''
+#     len(a)
+#     a.isdisjoint(other) - Проверка обших элементов 2х множества
+#     a.issybset(other) - является ли элементы в множестве подмножеством
+#     a.issuperset() - аналогично
+#     a.union(other) - объединение множества
+#     a.intersection(other) - пересечение множества 
+#     a.difference(other) - уникальные элементы
+#     a.symmetric_difference() - есть в 1, но нет во 2 множестве
+#     а.сору() - копирование множества
+#     a.update() - изменение элемента
+#     a.intersection_update()
+#     a.difference_update()
+#     a.symmetric_difference()
+#     a.add() - добавление элемента
+#     a.remove() - удаление злемента, если его нет - будет ошибка
+#     a.discard() - удаление элемента, если он есть
+#     a.clear() - очистка множества
+# '''
+
+# def calculate_score(word, language='ru'):
+#     SCORE_RU = {
+#         'А': 1, 'В': 1, 'Е': 1, 'И': 1, 'Н': 1, 'О': 1, 'С': 1, 'Т': 1,
+#         'Д': 2, 'К': 2, 'М': 2, 'П': 2, 'У': 2, 'Г': 2,
+#         'Б': 3, 'Ь': 3, 'Я': 3,
+#         'Й': 4, 'Ы': 4,
+#         'Ж': 5, 'З': 5, 'Ц': 5, 'Ч': 5,
+#         'Ш': 8, 'Э': 8, 'Ю': 8,
+#         'Ф': 10, 'Щ': 10, 'Ъ': 10
+#     }
+#     SCORE_EN = {
+#         'A': 1, 'E': 1, 'I': 1, 'O': 1, 'U': 1, 'L': 1, 'N': 1, 'S': 1, 'T': 1, 'R': 1,
+#         'D': 2, 'G': 2,
+#         'B': 3, 'C': 3, 'M': 3, 'P': 3,
+#         'F': 4, 'H': 4, 'V': 4, 'W': 4, 'Y': 4,
+#         'K': 5,
+#         'J': 8, 'X': 8,
+#         'Q': 10, 'Z': 10
+#     }
+
+#     if language == 'ru':
+#         scores = SCORE_RU
+#     elif language == 'en':
+#         scores = SCORE_EN
+#     else:
+#         print("Неверный выбор языка.")
+#         return 0
+
+#     total_score = 0
+#     for letter in word.upper():
+#         total_score += scores.get(letter, 0)
+#     return total_score
+
+# if __name__ == "__main__":
+#     while True:
+#         language_choice = input("Выберите язык ('ru' для русского, 'en' для английского, '0' - выход): ").lower()
+#         if language_choice == '0':
+#             break
+#         if language_choice not in ['ru', 'en']:
+#             print("Неверный выбор. Пожалуйста, выберите 'ru' или 'en'.")
+#             continue
+#         players = {}
+#         num_players = int(input("Cколько человек будет играть?:"))
+#         for i in range(num_players):
+#             name = input(f"Введите имя игрока {i + 1}: ")
+#             players[name]= 0
+#         print(f"Список игроков: {list(players.keys())}")
+#         for round in range(10):
+#             print(f"\n--- Раунд {round} ---")
+#             for player in list(players.keys()):
+#                 print(f"Ходит игрок {player}")
+#                 user_word = input("Введите слово: ").strip()
+#                 score = calculate_score(user_word, language_choice)
+#                 print(f"Слово '{user_word}' приносит {score} очков.\n")
+#                 players[player] += score
+#         print("Игра закончена! \nTaблица очков:")
+#         for player, total_score in players.items():
+#                     print(f"{player}: {total_score} очка")
+#         break
+
+
+
+# backpack ={'Зажигалка':20,
+#            'Компас':100,
+#            'Фрукты':500,
+#            'рубашка':300,
+#            'Термос':1000,
+#            'Аптечка':200,
+#            'Куртка':600,
+#            'Биноколь':400,
+#            'Удочка':1300,
+#            'Салфетки':40,
+#            'Спальник':2500,
+#            'Изолента':250,
+#            'Котел':3000,}
+# massa = int(input("Введите допустимый вес рюкзака: "))*1000
+# print("Могу взять:")
+# for key, value in backpack.items():
+#     if value < massa:
+#         print(key, value ,end=' ')
+# print()
+# print("Не Могу взять:")
+# for key, value in backpack.items():
+#     if value > massa:
+#         print(key, value ,end=' ')
+# print()
+
+
+# note_book = {
+#     "Маша": {
+#         'tel': '+7922123561',
+#         'vk': 'vk.com/masha321',
+#         'youtube': 'youtube.com/masha321',
+#         'telegram': 't.me/masha321'},
+#     "Петя": {
+#         'tel': '+7923123571',
+#         'vk': 'vk.com/petya321',
+#         'youtube': 'youtube.com/petya321',
+#         'telegram': 't.me/petya321'},
+# }
+# while True:
+#     name = input("Введите имя контакта (0 - выход): ").strip()
+#     if name == '0':
+#         break
+#     contact = note_book.get(name)
+#     if contact:
+#         print(f"\nДанные для контакта '{name}':")
+#         print(f"Телефон: {contact['tel']}")
+#         print(f"ВКонтакте: {contact['vk']}")
+#         print(f"YouTube: {contact['youtube']}")
+#         print(f"Telegram: {contact['telegram']}\n")
+#     else:
+#         print(f"Контакт '{name}' не найден.\n")
+
+
+# XY = "XY"
+# abcd = "ABCDEFGH"
+# num = "12345678"
+
+#         #первая строка
+# for i in range(8):
+#     if i == 0:
+#         print("@", abcd[i], sep=' ', end =' ')
+#     elif i == 7:
+#         print("", abcd[i], sep=' ', end =' @')
+#     else:
+#         print("", abcd[i], sep=' ', end =' ')
+# print()
+
+
+# words = [ ]
+# for i in range(8):
+#     tr_list = []
+#     for j in range(8):
+#         if j % 2 == 0:
+#             tr_list.append(XY[0])
+#         else:
+#             tr_list.append(XY[1])
+#     words.append(tr_list)
+
+# for j in range(8):
+#     for i in range(8):
+#         if i == 0:
+#             print(num[j], words[i][j], sep='  ', end=' ')
+#         elif i == 7:
+#             print( words[i][j], sep='  ', end=f' {num[7-j]}')
+#         else:
+#             print(words[i][j], sep=' ', end=' ')
+#     print()
+
+
+# #Последния строка
+# for i in range(8):
+#     if i == 0:
+#         print("@", abcd[i], sep=' ', end =' ')
+#     elif i == 7:
+#         print("", abcd[i], sep=' ', end =' @')
+#     else:
+#         print("", abcd[i], sep=' ', end =' ')
+
+# from calcut import menu
+# if __name__ == "__main__":
+#     menu()
+
+# def quote_print():
+#     print('“Don\'t compare yourself with anyone in this world...if you do so, you are insulting\nyourself.”\nBill Gates')
+
+# def even_between(num1, num2):
+#     list_even = []
+#     for i in range(num1 + 1, num2):
+#         if i % 2 == 0:
+#             list_even.append(i)
+#     return list_even
+
+# def square_print(xy, symbol, fill):
+#     symbol += " "
+#     for i in range(xy):
+#         if fill:
+#             print(symbol * xy)
+#         else:
+#             if i == 0 or i == xy - 1:
+#                 print(symbol * xy)
+#             else:
+#                 print(symbol + "  " * (xy - 2) + symbol)
+
+# Эксеперимент Монте-Карло
+
+from datetime import datetime, timedelta
+from random import randint
+
+def getBirthdays(numberOfBirthdays):
+    birthdays = [] # Список дней рождения
+    for i in range(numberOfBirthdays):
+        # Год в нашей имитации роли не играет, лишь бы в объектах дней рождения он был одинаков
+        startOfYear = datetime(2000, 1, 1)
+        # Случайный день года
+        randomNumbersOfDays = timedelta(randint(0, 364))
+        birthday = startOfYear + randomNumbersOfDays
+        birthdays.append(birthday)
+    return birthdays
+# Принимает спимок дней рождения. обрабатывает его и возвращает совпадения в датах, уоторые встречаются несколько раз
+def getMatch(birthdays):
+    if len(list(birthdays)) == len(set(birthdays)):
+        return None # Даты не совпадают, выходим из программы
+    for a, birthdayA in enumerate(birthdays):
+        for b, birthdayB in enumerate(birthdays[a+1 : ]):
+            if birthdayA == birthdayB:
+                return birthdayA # Даты совпали
+def main():
+    # Кортеж месяцев в году
+    MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    print("Добро пожаловать в приложение для симуляции совпадения дат рождения")
+    while True:
+        print("Сколько симуляций вы хотите сделать?(max=100)")
+        response = input()
+        if response.isdecimal() and 0 < int(response) <= 100:
+            numBDays = int(response)
+            break
+    print()
+    # Генерируем и отображем дни рождения
+    birthdays = getBirthdays(numBDays)
+    for i, birthday in enumerate(birthdays):
+        if i != 0:
+            print(",", end=" ")
+        month = MONTHS[birthday.month - 1]
+        dateText = "{} {}".format(month, birthday.day)
+        print(dateText, end="")
+    print()
+    print()
+    print(f"Генерация {numBDays} Случайных симуляций")
+    input("Для продолжения введите Enter...")
+    print("Запуск 100.000 симуляций")
+    simMatch = 0
+    for i in range(100_000):
+        if i % 10_000 == 0:
+            print(i, "Запущена симуляция...")
+        birthdays = getMatch(birthdays)
+        if getMatch(birthdays) != None:
+            simMatch += 1
+    print("-" * 12)
+    print("Было выполнено 100.000 симуляций")
+    probability = round(simMatch/100_000 * 100, 2)
+    print(f"Процент совпадения {probability}%")
+    print("Кол-во дат исследования:", numBDays)
+    print("Кол-во циклов симуляции:", simMatch)
+
+if __name__ == "__main__":
+    main()
